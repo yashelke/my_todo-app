@@ -13,8 +13,8 @@ function App() {
     <BrowserRouter>
     <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/todo" element={<Todo />} />
-        <Route path="*" element={<Todo />} /> {/* Catch-all route */}
+        <Route path="*" element={<Todo />} />
+        
     </Routes>
     
     
