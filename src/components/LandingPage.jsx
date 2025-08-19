@@ -53,13 +53,14 @@ export default function LandingPage() {
                         <span className="text-6xl font-bold text-white drop-shadow-xl">✓</span>
                     </motion.div>
                 </div>
+                {/* bg-gradient-to-r from cyan-500 to-purple-400 */}
                 
                 {/* Heading */}
                 <motion.h1 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
-                    className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6"
+                    className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 to-yellow-300 mb-6"
                 >
                     TaskFlow
                 </motion.h1>
