@@ -1,6 +1,9 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
 import './Todo.css' // Assuming you have a CSS file for styling
+import { MdSunny } from "react-icons/md";
+import { IoMdMoon } from "react-icons/io";
+
 
 function Todo() {
     const [toggle,setToggle]=useState(false);
@@ -144,7 +147,7 @@ const formatTimeAgo = (date) => {
     <>
     <header className="nav-container">
         <h1 className ="app-heading">TaskFlow</h1>
-        <button className="toggle-btn" onClick={() => setToggle(!toggle)}>{toggle ? 'Light Mode' : 'Dark Mode'}</button>
+        <button className="toggle-btn" onClick={() => setToggle(!toggle)}>{toggle ? <MdSunny /> : <IoMdMoon />}</button>
     </header>
 
     <section className="stats-section">

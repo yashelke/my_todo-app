@@ -66,7 +66,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-.toggle-btn {
+/* .toggle-btn {
   padding: 0.5rem 1rem;
   background: rgba(255, 255, 255, 0.2);
   border: none;
@@ -81,7 +81,137 @@ body {
 
 .toggle-btn:hover {
   background: rgba(255, 255, 255, 0.3);
+} */
+
+
+
+
+/* Toggle button tyling */
+
+.toggle-btn {
+  /* Sizing and layout */
+  padding: 0.75rem;
+  min-width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  
+  /* Bluish gradient background */
+  background: linear-gradient(145deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), 
+              inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  color: white;
+  cursor: pointer;
+  
+  /* Content alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Smooth transitions */
+  transition: all 0.3s ease;
+  
+  /* Positioning for different contexts */
+  position: relative;
+  z-index: 100;
 }
+
+.toggle-btn:hover {
+  background: linear-gradient(145deg, #3a8dcf 0%, #00c8d6 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), 
+              inset 0 2px 4px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.toggle-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 
+              inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Icon styling */
+.toggle-btn svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+.toggle-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .toggle-btn {
+    padding: 0.6rem;
+    min-width: 50px;
+    height: 50px;
+  }
+  
+  .toggle-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-btn {
+    padding: 0.5rem;
+    min-width: 44px;
+    height: 44px;
+  }
+  
+  .toggle-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .toggle-btn {
+    border: 2px solid #004e92;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .toggle-btn,
+  .toggle-btn svg {
+    transition: none;
+  }
+  
+  .toggle-btn:hover {
+    transform: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== STATS SECTION ===== */
 /* .stats-section {
