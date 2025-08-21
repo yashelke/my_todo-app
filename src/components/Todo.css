@@ -66,22 +66,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* .toggle-btn {
-  padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  border-radius: 50px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-} */
 
 
 
@@ -803,7 +787,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   width: 90%;
   max-width: 400px;
-  
+  color:white;
   font-weight: bolder;
 }
 
