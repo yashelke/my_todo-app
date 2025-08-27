@@ -70,32 +70,31 @@ body {
 
 
 
-/* Toggle button tyling */
 
+
+ /* Toggle button styling  */
+ 
 .toggle-btn {
-  /* Sizing and layout */
+ 
   padding: 0.75rem;
   min-width: 60px;
   height: 60px;
   border: none;
   border-radius: 50%;
   
-  /* Bluish gradient background */
   background: linear-gradient(145deg, #4facfe 0%, #00f2fe 100%);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), 
               inset 0 2px 4px rgba(255, 255, 255, 0.3);
   color: white;
   cursor: pointer;
   
-  /* Content alignment */
   display: flex;
   align-items: center;
   justify-content: center;
   
-  /* Smooth transitions */
   transition: all 0.3s ease;
   
-  /* Positioning for different contexts */
+  
   position: relative;
   z-index: 100;
 }
@@ -105,7 +104,7 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), 
               inset 0 2px 4px rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
-}
+}  
 
 .toggle-btn:active {
   transform: translateY(1px);
@@ -198,55 +197,7 @@ body {
 
 
 /* ===== STATS SECTION ===== */
-/* .stats-section {
-  padding: 1.5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.stats-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.stats-cards div {
-  padding: 1.5rem;
-  border-radius: 12px;
-  background: var(--card-color);
-  box-shadow: var(--shadow);
-  text-align: center;
-  transition: var(--transition);
-} */
- /* .stats-section {
-  padding: 1.5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow-x: auto; 
- }
-
-.stats-cards {
-  display: flex; 
-  gap: 1.5rem;
-  padding-bottom: 1rem; 
-  min-width: fit-content; 
-}
-
-.stats-cards div {
-  min-width: 200px; 
-  padding: 1.5rem;
-  border-radius: 12px;
-  background: var(--card-color);
-  box-shadow: var(--shadow);
-  text-align: center;
-  transition: var(--transition);
-  flex-shrink: 0; 
-}
-.stats-cards div {
-  flex: 1; 
-  min-width: 150px; 
-} */
- .stats-section {
+   .stats-section {
   padding: 1.5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -254,14 +205,14 @@ body {
 
 .stats-cards {
   display: flex;
-  gap: 1rem; /* Slightly reduced gap for mobile */
+  gap: 1rem; 
   width: 100%;
 }
 
 .stats-cards div {
-  flex: 1; /* Equal width distribution */
-  min-width: 120px; /* Minimum width for mobile */
-  padding: 1.25rem; /* Slightly reduced padding for mobile */
+  flex: 1;
+  min-width: 120px; 
+  padding: 1.25rem; 
   border-radius: 12px;
   background: var(--card-color);
   box-shadow: var(--shadow);
@@ -269,7 +220,7 @@ body {
   transition: var(--transition);
 }
 
-/* Mobile optimization */
+
 @media (max-width: 480px) {
   .stats-cards {
     gap: 0.75rem;
@@ -284,13 +235,30 @@ body {
   .card-value {
     font-size: 1.5rem;
   }
-}
+}  
 
-/* .card1 { border-top: 4px solid var(--primary-color); }
-.card2 { border-top: 4px solid var(--warning-color); }
-.card3 { border-top: 4px solid var(--success-color);
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /* Card Styles with Glow Effects */
 .card1 {
   border-top: 4px solid var(--primary-color);
@@ -765,7 +733,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* Notification Styles */
 
-
+/* 
 .notification-center {
   position: fixed;
   top: 0;
@@ -811,4 +779,148 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 @keyframes progress {
   from { width: 100%; }
   to { width: 0%; }
+} */
+
+
+/* Updated Notifications Styles */
+/* Notification Styles */
+.notification-center {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    min-width: 300px;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+.notification-center.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.notification-center.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.notification-icon {
+    margin-right: 12px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.notification-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0 0 8px 8px;
+}
+
+.notification-progress-bar {
+    height: 100%;
+    background: white;
+    animation: progressBar 3s linear forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes progressBar {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.edit-modal {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.edit-modal h3 {
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.edit-modal input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.cancel-btn, .save-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cancel-btn {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
 }

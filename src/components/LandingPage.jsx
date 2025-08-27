@@ -76,25 +76,7 @@ export default function LandingPage() {
                 </motion.p>
                 
                 
-                {/* <motion.button
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.5, duration: 0.8 }}
-                    whileHover={{ 
-                        scale: 1.05,
-                        boxShadow: "0 0 20px rgba(104, 211, 245, 0.5)"
-                    }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => navigate('/todo')}
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-full text-xl font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
-                >
-                    <span className="relative z-10">Get Started</span>
-                    <motion.span 
-                        className="absolute inset-0 bg-white opacity-0 hover:opacity-10"
-                        whileHover={{ opacity: 0.1 }}
-                        transition={{ duration: 0.3 }}
-                    />
-                </motion.button> */}
+             
 
 
                 {/* Get Started Button */}
