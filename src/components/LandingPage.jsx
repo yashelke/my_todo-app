@@ -90,7 +90,7 @@ export default function LandingPage() {
                                 background: "linear-gradient(to right, #00d2ff, #3a7bd5)"
                             }}
                             whileTap={{ scale: 0.98 }}
-                            onClick={() => navigate('/todo')}
+                            onClick={() => navigate('/login')}
                             className="relative overflow-hidden group"
                             style={{
                                 padding: '1.25rem 3rem',
